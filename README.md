@@ -1,6 +1,4 @@
 # React Event Handling Demo: Interactive UI Components with State Management
-Example UseState
-
 
 ## Usage Instructions
 ### Prerequisites

@@ -1,0 +1,113 @@
+/* General Container */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* Example Sections */
+.example-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.example-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Inputs and Select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: #333;
+  color: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+}
+
+/* Hover Box */
+.hover-box {
+  padding: 25px;
+  background-color: #333;
+  border: 1px solid #666;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.hover-box.hovered {
+  background-color: #28a745;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

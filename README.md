@@ -12,7 +12,7 @@ Example UseState
 
 ```bash
 # Clone the repository
-git clone [repository-url]
+git clone https://github.com/ddrxz/S2-T1-State-TUP25
 cd [repository-name]
 # Install dependencies
 npm install

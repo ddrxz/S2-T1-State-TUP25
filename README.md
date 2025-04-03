@@ -14,19 +14,12 @@ Example UseState
 # Clone the repository
 git clone [repository-url]
 cd [repository-name]
-
 # Install dependencies
 npm install
-# or
-
 ### Quick Start
-
 1. Start the development server:
-```bash
 npm run dev
-# or
-yarn dev
-```
+```bash
 
 2. Open your browser and navigate to `http://localhost:5173`
 

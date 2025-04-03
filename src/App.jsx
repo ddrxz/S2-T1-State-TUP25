@@ -2,39 +2,46 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  // Múltiples estados para diferentes ejemplos
   const [count, setCount] = useState(0)
   const [inputText, setInputText] = useState('')
   const [isHovered, setIsHovered] = useState(false)
   const [selectedOption, setSelectedOption] = useState('opción1')
 
-  // Manejadores de eventos
-  const handleIncrement = () => {
+  const handleIncrement = (event) => {
+    console.log('Evento de incremento:', event);
     setCount(count + 1)
   }
 
-  const handleDecrement = () => {
+  const handleDecrement = (event) => {
+    console.log('Evento de decremento:', event);
     setCount(count - 1)
   }
 
   const handleInputChange = (event) => {
+    console.log('Evento de cambio de input:', event);
+    console.log('Valor del input:', event.target.value);
     setInputText(event.target.value)
   }
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (event) => {
+    console.log('Evento de mouse enter:', event);
     setIsHovered(true)
   }
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (event) => {
+    console.log('Evento de mouse leave:', event);
     setIsHovered(false)
   }
 
   const handleSelectChange = (event) => {
+    console.log('Evento de cambio de select:', event);
+    console.log('Valor seleccionado:', event.target.value);
     setSelectedOption(event.target.value)
   }
 
   const handleFormSubmit = (event) => {
     event.preventDefault()
+    console.log('Evento de envío de formulario:', event);
     alert(`Formulario enviado con texto: ${inputText}`)
   }
 
@@ -49,7 +56,10 @@ function App() {
           <div className="button-group">
             <button onClick={handleIncrement}>Incrementar</button>
             <button onClick={handleDecrement}>Decrementar</button>
-            <button onClick={() => setCount(0)}>Reiniciar</button>
+            <button onClick={(event) => {
+              console.log('Evento de reinicio:', event);
+              setCount(0);
+            }}>Reiniciar</button>
           </div>
         </section>
 
@@ -59,11 +69,11 @@ function App() {
           <form onSubmit={handleFormSubmit}>
             <div className="form-group">
               <label htmlFor="textInput">Escribe algo:</label>
-              <input 
+              <input
                 id="textInput"
-                type="text" 
-                value={inputText} 
-                onChange={handleInputChange} 
+                type="text"
+                value={inputText}
+                onChange={handleInputChange}
                 placeholder="Escribe aquí..."
               />
             </div>
@@ -75,7 +85,7 @@ function App() {
         {/* Ejemplo 3: Eventos de mouse */}
         <section className="example-section">
           <h2>Ejemplo 3: Eventos de Mouse</h2>
-          <div 
+          <div
             className={`hover-box ${isHovered ? 'hovered' : ''}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -90,9 +100,9 @@ function App() {
           <h2>Ejemplo 4: Eventos de Select</h2>
           <div className="form-group">
             <label htmlFor="selectOption">Selecciona una opción:</label>
-            <select 
+            <select
               id="selectOption"
-              value={selectedOption} 
+              value={selectedOption}
               onChange={handleSelectChange}
             >
               <option value="opción1">Opción 1</option>
